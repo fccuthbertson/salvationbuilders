@@ -9,3 +9,7 @@ build-r:
 .PHONY: run
 run:
 	@cd rust-server && cargo run
+
+.PHONY: run-r
+run-r:
+	@cd rust-server && cargo run -r
