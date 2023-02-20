@@ -1,0 +1,13 @@
+/home/frank/repos/salvationbuilders/rust-server/target/release/deps/pear-f32fc8b378793717.rmeta: /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/lib.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/macros.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/input.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/result.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/debug.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/combinators.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/parsers.rs
+
+/home/frank/repos/salvationbuilders/rust-server/target/release/deps/libpear-f32fc8b378793717.rlib: /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/lib.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/macros.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/input.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/result.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/debug.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/combinators.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/parsers.rs
+
+/home/frank/repos/salvationbuilders/rust-server/target/release/deps/pear-f32fc8b378793717.d: /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/lib.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/macros.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/input.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/result.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/debug.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/combinators.rs /home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/parsers.rs
+
+/home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/lib.rs:
+/home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/macros.rs:
+/home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/input.rs:
+/home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/result.rs:
+/home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/debug.rs:
+/home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/combinators.rs:
+/home/frank/.cargo/registry/src/github.com-1ecc6299db9ec823/pear-0.1.5/src/parsers.rs:
