@@ -8,12 +8,12 @@ jQuery(document).ready(function(){
     // Currently, shake on error is enabled.
     // When a field is left blank, jQuery will shake the form
 
-    /* Begin config */
+    /* Begin config.toml */
 
     //  var shake = "Yes";
         var shake = "No";
 
-    /* End config */
+    /* End config.toml */
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
