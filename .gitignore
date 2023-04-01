@@ -1,1 +1,2 @@
-rust-server/src/target/
+rust-server/target/
+rust-server/debug/
