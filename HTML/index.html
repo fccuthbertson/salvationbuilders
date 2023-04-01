@@ -30,45 +30,7 @@
 
 <!-- Header
 ================================================== -->
-
-<div class="container">
-
-	<div class="row">
-		<div class="header">
-
-			<div class="col-md-3 col-sm-12">
-				<div id="logo">
-					<a href="index.html"><img src="images/logo.png" alt=""></a>
-				</div>
-			</div>
-
-			<div class="col-md-9 col-sm-12">
-				<ul class="header-widget">
-					<li>
-						<i class="sl sl-icon-call-in"></i>
-						<div class="widget-content">
-							<span class="title">Questions?</span>
-							<span class="data">(435) 463-8769 </span>
-						</div>
-					</li>
-
-					<li>
-						<i class="sl sl-icon-location"></i>
-						<div class="widget-content">
-							<span class="title">Our Office</span>
-							<span class="data">45 Park Avenue, NY</span>
-						</div>
-					</li>
-
-					<li class="with-btn"><a href="contact.html" class="button border medium">Request Service</a></li>
-				</ul>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-
-</div>
-
+	<div id="header"></div>
 
 <!-- Navigation
 ================================================== -->
@@ -784,6 +746,15 @@
 <script type="text/javascript" src="scripts/extensions/revolution.extension.parallax.min.js"></script>
 <script type="text/javascript" src="scripts/extensions/revolution.extension.slideanims.min.js"></script>
 <script type="text/javascript" src="scripts/extensions/revolution.extension.video.min.js"></script>
+
+
+	<script type="text/javascript">
+		(function() {
+			$(window).ready(function() {
+				$('#header').load('header.html')
+			})
+		})()
+	</script>
 
 
 <!-- Style Switcher
