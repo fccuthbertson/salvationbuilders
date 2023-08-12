@@ -1,0 +1,23 @@
+# sets or overrides any variables from
+[default]
+port = 8000
+limits = { forms = 32768 }
+
+[default.tls]
+certs = "/home/frank/certs/localhost.crt"
+key = "/home/frank/certs/localhost.key"
+
+[debug]
+keep_alive = 5
+read_timeout = 5
+write_timeout = 5
+log = "normal"
+
+[release]
+keep_alive = 5
+read_timeout = 5
+write_timeout = 5
+log = "critical"
+[release.tls]
+certs ="/etc/letsencrypt/live/salvationbuildersllc.com/fullchain.pem"
+key = "/etc/letsencrypt/live/salvationbuildersllc.com/privkey.pem"

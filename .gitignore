@@ -1,1 +1,3 @@
-rust-server/src/target/
+rust-server/target
+rust-server/target/debug/rust-server
+rust-server/target/release/rust-server

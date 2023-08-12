@@ -12,4 +12,4 @@ run:
 
 .PHONY: run-r
 run-r:
-	@cd rust-server && cargo run -r
+	@cd rust-server && cargo run --release

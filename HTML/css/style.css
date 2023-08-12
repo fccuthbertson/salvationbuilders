@@ -2957,7 +2957,7 @@ a.post-img img { width: 100%; }
 #googlemaps { padding-bottom: 33%; }
 
 .google-map-container { margin: 0 0 38px 0; }
-.google-map-container img { max-width: none !important; }
+.google-map-container iframe { max-width: none }
 
 
 

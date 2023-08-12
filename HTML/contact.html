@@ -110,8 +110,16 @@
 		<div class="col-md-12">
 
 			<!-- Google Maps -->
-			<section class="google-map-container">
-				<div id="googlemaps" class="google-map google-map-full"></div>
+			<section>
+					<iframe
+							width="100%"
+							height="450"
+							style="border:0"
+							loading="lazy"
+							allowfullscreen
+							referrerpolicy="no-referrer-when-downgrade"
+							src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDdPK9VpNLn3GHsY_ZdBoFsS0jWKtMbMgo&q=New+Braunfels+TX">
+					</iframe>
 			</section>
 			<!-- Google Maps / End -->
 		</div>
@@ -124,7 +132,7 @@
 			<!-- text box -->
 			<div class="sidebar-textbox">
 				<h4>Our Office</h4>
-				<span class="margin-bottom-10">Some Address<br/>New Braunfels, TX</span><br/>
+				<span class="margin-bottom-10"><br/>New Braunfels, TX</span><br/>
 				Phone: <span>(435) 463-8769</span> <br>
 				E-Mail: <span>troy@salvationbuildersllc.com</span> <br>
 			</div>
@@ -278,33 +286,6 @@
 <script type="text/javascript" src="scripts/jquery.contact-form.js"></script>
 <script type="text/javascript" src="scripts/jquery.jpanelmenu.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
-
-
-<!-- Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-<script src="scripts/jquery.gmaps.min.js"></script>
-
-<script type="text/javascript">
-	(function($){
-		$(document).ready(function(){
-
-			$('#googlemaps').gMap({
-				maptype: 'ROADMAP',
-				scrollwheel: false,
-				zoom: 13,
-				markers: [
-					{
-						address: 'New York, 45 Park Avenue', // Your Adress Here
-						html: '<strong>Our Office</strong><br>45 Park Avenue, Apt. 303 </br>New York, NY 10016 ',
-						popup: true,
-					}
-				],
-			});
-
-		   });
-
-	})(this.jQuery);
-</script>
 
 
 <!-- Style Switcher
