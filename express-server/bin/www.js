@@ -20,6 +20,8 @@ const isSsl = args[1] === 'ssl'
 
 if(isProd) {
   env.env('prod', 'envs')
+} else if (isSsl) {
+  env.env('dev.ssl', 'envs')
 } else {
   env.env('dev', 'envs')
 }
@@ -35,12 +37,12 @@ app.set('sslPort', sslPort)
  * Create HTTP server.
  */
 const server = http.createServer(app);
-const sslServer = https.createServer({
-  key : fs.readFileSync(process.env.SSL_KEY),
-  cert : fs.readFileSync(process.env.SSL_CERT)
-},app)
 
 if(isSsl) {
+  const sslServer = https.createServer({
+    key : fs.readFileSync(process.env.SSL_KEY),
+    cert : fs.readFileSync(process.env.SSL_CERT)
+  },app)
   sslServer.listen(sslPort)
   sslServer.on('error', onError(sslPort))
   sslServer.on('listening', onListening(sslServer))
