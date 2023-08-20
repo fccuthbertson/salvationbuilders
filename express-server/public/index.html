@@ -48,25 +48,7 @@
 		</div>
 		
 		<!-- Main Navigation -->
-		<nav id="navigation">
-
-			<!-- Search Form -->
-			<div class="search-container">
-		      	<form action="#" method="get">
-		      		<input type="text" name="s" id="s" onblur="if(this.value=='')this.value='to search type and hit enter';" onfocus="if(this.value=='to search type and hit enter')this.value='';" value="to search type and hit enter" />
-		      	</form>
-		      	<div class="close-search"><a class="fa fa-times" href="#"></a></div>
-			</div>
-
-			<ul class="menu" id="responsive">
-				<li class="dropdown" >
-					<a href="services-1.html">Services</a>
-				</li>
-				<li><a href="contact.html">Contact</a></li>
-				<!-- Search Icon-->
-				<li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-			</ul>
-		</nav>
+		<nav id="navigation"></nav>
 	</div>
 	</div>
 </div>
@@ -497,7 +479,7 @@
 <script type="text/javascript" src="scripts/jquery.contact-form.js"></script>
 <script type="text/javascript" src="scripts/jquery.jpanelmenu.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
-
+	<script type="text/javascript" src="scripts/partial.views.js"></script>
 
 <!-- REVOLUTION SLIDER SCRIPT -->
 <script type="text/javascript">
@@ -628,6 +610,7 @@
 	(function() {
 		$(window).ready(function() {
 			$('#header').load('header.html')
+			$('#navigation').load('nav.html')
 			$('#footer').load('footer.html')
 		})
 	})()
