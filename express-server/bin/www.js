@@ -8,23 +8,10 @@ const debug = require('debug')('express-server:server');
 const http = require('http');
 const https = require('https')
 const fs = require("fs");
-const env = require('custom-env')
 
 /*
 * script args
 * */
-const args = process.argv.slice(2)
-console.debug(args)
-const isProd = args[0] === 'prod'
-const isSsl = args[1] === 'ssl'
-
-if(isProd) {
-  env.env('prod', 'envs')
-} else if (isSsl) {
-  env.env('dev.ssl', 'envs')
-} else {
-  env.env('dev', 'envs')
-}
 
 /**
  * Get port from environment and store in Express.
@@ -36,21 +23,14 @@ app.set('sslPort', sslPort)
 /**
  * Create HTTP server.
  */
-const server = http.createServer(app);
 
-if(isSsl) {
-  const sslServer = https.createServer({
+const sslServer = https.createServer({
     key : fs.readFileSync(process.env.SSL_KEY),
     cert : fs.readFileSync(process.env.SSL_CERT)
   },app)
-  sslServer.listen(sslPort)
-  sslServer.on('error', onError(sslPort))
-  sslServer.on('listening', onListening(sslServer))
-} else {
-  server.listen(port)
-  server.on('error', onError(port));
-  server.on('listening', onListening(server));
-}
+sslServer.listen(sslPort)
+sslServer.on('error', onError(sslPort))
+sslServer.on('listening', onListening(sslServer))
 
 /**
  * Normalize a port into a number, string, or false.
