@@ -5,7 +5,6 @@
  */
 const app = require('../app');
 const debug = require('debug')('express-server:server');
-const http = require('http');
 const https = require('https')
 const fs = require("fs");
 
@@ -18,8 +17,6 @@ const fs = require("fs");
  */
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-const sslPort = normalizePort(process.env.SSL_PORT || '3001')
-app.set('sslPort', sslPort)
 /**
  * Create HTTP server.
  */
@@ -28,8 +25,8 @@ const sslServer = https.createServer({
     key : fs.readFileSync(process.env.SSL_KEY),
     cert : fs.readFileSync(process.env.SSL_CERT)
   },app)
-sslServer.listen(sslPort)
-sslServer.on('error', onError(sslPort))
+sslServer.listen(port)
+sslServer.on('error', onError(port))
 sslServer.on('listening', onListening(sslServer))
 
 /**
