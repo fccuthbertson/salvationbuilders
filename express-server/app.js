@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// const projectImagesDir = path.join(__dirname, 'public/images/projects')
+// app.use('images/projects', express.static(projectImagesDir))
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
