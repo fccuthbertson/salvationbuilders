@@ -258,8 +258,8 @@
 <script type="text/javascript" src="scripts/jquery.jpanelmenu.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 	<script type="text/javascript" src="partial-views/load-common-partial-views.js"></script>
+	<script type="text/javascript" src="../partial-views/load-gallery-images.js"></script>
 	<script>
-		const project = '../images/projects/black_cabinets_install/';
 		const images = [
 			'20230217_153628',
 			'20230217_154335',
@@ -280,19 +280,8 @@
 			'20230711_115622',
 			'20230711_115631',
 		];
-		$.each(images, function (_,image) {
-					const loc = project + image + '.jpg'
-					const anchor = document.createElement('a');
-					anchor.classList.add('item', 'img-hover','mfp-gallery')
-					anchor.href= loc;
-					const img = document.createElement('img');
-					img.setAttribute('src', loc);
-					anchor.appendChild(img);
-					const gallery = document.getElementById('gallery')
-					gallery.appendChild(anchor)
-				});
+		loadGallery('black_cabinets_install', images, 'gallery')
 	</script>
-
 </div>
 <!-- Wrapper / End -->
 
