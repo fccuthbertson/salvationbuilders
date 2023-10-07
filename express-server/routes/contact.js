@@ -1,18 +1,19 @@
 import * as express from 'express'
-const router = express.Router();
-import { put } from '../aws/s3.js'
+import {sendEmail} from '../aws/ses.js'
 
-router.post('/', async function (req, res){
+const router = express.Router();
+
+router.post('/', async function (req, res) {
         const {name, email, phone, subject, comments} = req.body
         console.log(name, email, phone, subject, comments)
-        // write request to DB. Push notification to phone
-    const dt = new Date()
-    const year = dt.getFullYear()
-    const month = dt.getMonth()
-    const day = dt.getDay()
-    const key = year + '-' + month + '-' + day + '_' + email
-    await put(key,{
-        name, email, phone, subject, comments
-    })}
+        // const dateTime = new Date().toISOString()
+        // const key = email + "/" + dateTime
+        // await put(key, {
+        //     name, email, phone, subject, comments
+        // })
+        const emailSubject = subject + " - " + email
+        await sendEmail(emailSubject, comments)
+        res.send("Request Sent. Someone will contact you shortly.")
+    }
 )
 export {router}

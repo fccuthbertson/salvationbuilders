@@ -3,17 +3,9 @@ import {
     PutObjectCommand,
     GetObjectCommand
 } from '@aws-sdk/client-s3'
-
-const region = process.env.AWS_REGION
-const accessKeyId = process.env.AWS_KEY
-const secretAccessKey = process.env.AWS_SECRET
-const s3 = new S3Client({
-    region,
-    credentials: {
-        accessKeyId,
-        secretAccessKey
-    }
-})
+import {ClientConfig} from "./credentials.js";
+const clientConfig = new ClientConfig()
+const s3 = new S3Client(clientConfig)
 
 export function getClient() {
     // A region and credentials can be declared explicitly. For example
@@ -28,6 +20,6 @@ export async function put(key, body) {
     await s3.send(new PutObjectCommand({
         Bucket: 'salvation-builders-llc',
         Key: key,
-        Body: body
+        Body: JSON.stringify(body)
     }))
 }
