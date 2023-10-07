@@ -25,5 +25,5 @@ export async function sendEmail(subject, body) {
     const response = await ses.send(command)
     console.log(response)
     const resStatus = response.$metadata.httpStatusCode
-    if(!(resStatus >= 200 && resStatus <= 299)) throw "error sending contact email"
+    if(resStatus < 200 || resStatus > 299) throw "error sending contact email"
 }
