@@ -1,7 +1,7 @@
-const express = require('express');
+import * as express from 'express'
 const router = express.Router();
-const fs = require('fs')
-const path = require('path')
+import * as fs from 'fs'
+import * as path from 'path'
 
 /* GET users listing. */
 router.get('/:projectName', function(req, res, next) {
@@ -20,4 +20,4 @@ router.get('/:projectName', function(req, res, next) {
     })
 });
 
-module.exports = router;
+export {router}

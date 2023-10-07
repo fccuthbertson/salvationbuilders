@@ -3,10 +3,11 @@
 /**
  * Module dependencies.
  */
-const app = require('../app');
-const debug = require('debug')('express-server:server');
-const https = require('https')
-const fs = require("fs");
+import {app} from "../app.js"
+import debug from 'debug'
+debug('express-server')
+import * as https from 'https'
+import * as fs from 'fs'
 
 /*
 * script args

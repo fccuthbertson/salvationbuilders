@@ -1,14 +1,18 @@
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+import * as createError from 'http-errors'
+import express from 'express'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+import cookieParser from 'cookie-parser'
+import logger from "morgan"
 
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
-const projectImagesRouter = require('./routes/project-images')
-
+import {router as indexRouter} from './routes/index.js'
+import {router as usersRouter} from './routes/users.js'
+import {router as projectImagesRouter} from './routes/project-images.js'
+import {router as contactRouter} from './routes/contact.js'
 const app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,6 +30,7 @@ app.use('/project/gallery', express.static(projectImagesDir))
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/project/images', projectImagesRouter)
+app.use('/contact', contactRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -43,4 +48,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+export {app}
