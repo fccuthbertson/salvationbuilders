@@ -150,42 +150,43 @@
 				<div id="contact-message"></div> 
 
 					<form method="post" action="/contact" name="contactform" id="contactform" autocomplete="on">
+					<div class="g-recaptcha" data-sitekey="6LfBXYcoAAAAAO9wuhoNm6EhzD_6GYjCEjPOoTEJ">
+						<div class="row">
+							<div class="col-md-6">
+								<div>
+									<input name="name" type="text" id="name" placeholder="Your Name" required="required" />
+								</div>
 
-					<div class="row">
-						<div class="col-md-6">
-							<div>
-								<input name="name" type="text" id="name" placeholder="Your Name" required="required" />
+								<div>
+									<input name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
+								</div>
 							</div>
-							
-							<div>
-								<input name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />
+
+							<div class="col-md-6">
+								<div>
+									<input name="phone" type="tel" id="phone" size="30" placeholder="Phone number (optional)" />
+								</div>
+
+								<div>
+									<select name="subject" id="subject" required="required">
+										<option value="">Select Subject</option>
+										<option value="Painting">Painting</option>
+										<option value="Repair">Repair</option>
+										<option value="Carpentry">Carpentry</option>
+										<option value="Remodeling">Remodeling</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
 							</div>
 						</div>
-						
-						<div class="col-md-6">
-							<div>
-								<input name="phone" type="tel" id="phone" size="30" placeholder="Phone number (optional)" />
-							</div>
 
-							<div>
-								<select name="subject" id="subject" required="required">
-									<option value="">Select Subject</option>
-									<option value="Painting">Painting</option>
-									<option value="Repair">Repair</option>
-									<option value="Carpentry">Carpentry</option>
-									<option value="Remodeling">Remodeling</option>
-									<option value="Other">Other</option>
-								</select>
-							</div>
+						<div>
+							<textarea name="comments" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
 						</div>
+
+						<input type="submit" class="submit" id="submit" value="Submit" />
+
 					</div>
-
-					<div>
-						<textarea name="comments" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
-					</div>
-
-					<input type="submit" class="submit" id="submit" value="Submit" />
-
 					</form>
 			</section>
 		</div>
@@ -230,8 +231,10 @@
 <script type="text/javascript" src="scripts/jquery.stacktable.js"></script>
 <script type="text/javascript" src="scripts/jquery.contact-form.js"></script>
 <script type="text/javascript" src="scripts/jquery.jpanelmenu.js"></script>
-<script type="text/javascript" src="scripts/custom.js"></script>
-<script type="text/javascript" src="scripts/partial.views.js"></script>
+
+	<script type="text/javascript" src="scripts/custom.js" async defer></script>
+	<script type="text/javascript" src="scripts/partial.views.js" async defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<!-- Style Switcher
     ================================================== -->
 <!-- Style Switcher / End -->
