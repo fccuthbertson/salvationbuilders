@@ -6,33 +6,19 @@
 import {app} from "../app.js"
 import debug from 'debug'
 debug('express-server')
-import * as https from 'https'
-import * as fs from 'fs'
 
 /*
 * script args
 * */
 
 /**
- * Get port from environment and store in Express.
+ * Get port from environment and start server
  */
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 app.listen(port, () => {
   console.log(`listening on port ${port}`)
 })
-/**
- * Create HTTP server.
- */
-
-// const sslServer = https.createServer({
-//     key : fs.readFileSync(process.env.SSL_KEY),
-//     cert : fs.readFileSync(process.env.SSL_CERT)
-//   },app)
-// sslServer.listen(port)
-// sslServer.on('error', onError(port))
-// sslServer.on('listening', onListening(sslServer))
-
 
 /**
  * Normalize a port into a number, string, or false.
