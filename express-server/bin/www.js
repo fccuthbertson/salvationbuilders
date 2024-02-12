@@ -18,17 +18,21 @@ import * as fs from 'fs'
  */
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+app.listen(port, () => {
+  console.log(`listening on port ${port}`)
+})
 /**
  * Create HTTP server.
  */
 
-const sslServer = https.createServer({
-    key : fs.readFileSync(process.env.SSL_KEY),
-    cert : fs.readFileSync(process.env.SSL_CERT)
-  },app)
-sslServer.listen(port)
-sslServer.on('error', onError(port))
-sslServer.on('listening', onListening(sslServer))
+// const sslServer = https.createServer({
+//     key : fs.readFileSync(process.env.SSL_KEY),
+//     cert : fs.readFileSync(process.env.SSL_CERT)
+//   },app)
+// sslServer.listen(port)
+// sslServer.on('error', onError(port))
+// sslServer.on('listening', onListening(sslServer))
+
 
 /**
  * Normalize a port into a number, string, or false.
