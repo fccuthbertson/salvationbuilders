@@ -1,9 +1,6 @@
 import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses'
-import {ClientConfig} from "./credentials.js";
 
-// const clientConfig = new ClientConfig()
 const ses = new SESClient()
-
 export async function sendEmail(subject, body) {
     const input = {
         Source: 'contact@salvationbuildersllc.com',
@@ -21,7 +18,6 @@ export async function sendEmail(subject, body) {
             }
         }
     }
-    // 6LfBXYcoAAAAAO9wuhoNm6EhzD_6GYjCEjPOoTEJ
     const command = new SendEmailCommand(input)
     const response = await ses.send(command)
     console.log(response)

@@ -20,6 +20,12 @@
 <!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  function onSubmit(token) {
+	document.getElementById("contact-form").submit();
+  }
+</script>
 
 </head>
 
@@ -122,7 +128,7 @@
 				<h4 class="headline with-border margin-top-10 margin-bottom-35">Let’s get in touch</h4>
 
 				<div id="contact-message">
-					<form method="post" action="/contact" name="contactform" id="contactform" autocomplete="on">
+					<form method="post" action="/contact" name="contact-form" id="contact-form" autocomplete="on">
 						<div class="row">
 							<div class="col-md-6">
 								<div>
@@ -156,9 +162,8 @@
 							<textarea name="comments" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>
 						</div>
 
-						<div class="g-recaptcha" data-sitekey="6LfBXYcoAAAAAO9wuhoNm6EhzD_6GYjCEjPOoTEJ"></div>
+						<button class="g-recaptcha" data-sitekey="6LfBXYcoAAAAAO9wuhoNm6EhzD_6GYjCEjPOoTEJ" data-callback="onSubmit">Submit</button>
 						<br/>
-						<input type="submit" class="submit" id="submit" value="Submit" />
 					</form>
 				</div>
 			</section>
